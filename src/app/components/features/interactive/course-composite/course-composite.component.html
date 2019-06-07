@@ -1,0 +1,46 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-success">
+                      
+                      <div class="row">
+                        <div class="col-md-8">
+                          <h4 class="card-title ">{{ currentCourse.name }}</h4>
+                          <p class="card-category"> Here is a subtitle for this table</p>
+                        </div>
+                        <div class="col-md-2">
+                          <app-course-select [courseList]="courseList" [currentCourse]="currentCourse" [courseSelectHandle]="setCourse"></app-course-select>
+                        </div>
+                        <div class="col-md-2">
+                          <app-hole-select [currentCourse]="currentCourse" [holeSelectHandle]="setHoleNum"></app-hole-select>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row composite-row">
+                      <div class="col-md-12 col-sm-12">
+                        <app-waypoint-select [info]="info"></app-waypoint-select>
+                      </div>
+                    </div>
+
+                    <div class="row composite-row">
+                      <div class="col-md-12 col-sm-12">
+                        <app-video-timeline [info]="info"></app-video-timeline>
+                        <app-video-time-status></app-video-time-status>
+                        
+                        <app-youtube360 [info]="info" [playerId]="'youtube360_1'" [youtubeId]="'rfyzaaDcqMQ'"></app-youtube360>
+                      </div>
+                    </div>
+                    <div class="row composite-row">
+                      <div class="col-md-12 col-sm-12">
+                        <app-google-map [info]="info"></app-google-map>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
